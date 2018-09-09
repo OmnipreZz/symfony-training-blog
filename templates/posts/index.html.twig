@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+
+<section class="posts">
+
+    <post>
+        <h2>Titre de l'article</h2>
+        <div class="metadata">Ecrit le 09/09/2018 à 09:39 dans la catégorie Politique</div>
+        <div class="content">
+            <img src="http://placehold.it/350x150" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatum error facilis eligendi, illo quae!</p>
+            <p>Molestiae reprehenderit, veniam ipsa soluta maxime delectus minus, deleniti accusamus quae odio labore optio voluptatibus.</p>
+            <a href="{{ path('posts_show') }}" class="btn btn-primary">Lire la suite</a>
+        </div>
+    </post>
+    <post>
+        <h2>Titre de l'article</h2>
+        <div class="metadata">Ecrit le 09/09/2018 à 09:39 dans la catégorie Politique</div>
+        <div class="content">
+            <img src="http://placehold.it/350x150" alt="">
+            <p>Cumque, aspernatur minima, odio molestiae deleniti reprehenderit porro doloribus officia maiores impedit ut! Aspernatur, numquam.</p>
+            <p>Facilis labore officiis expedita, vero quas veniam quisquam, pariatur repellendus iste voluptatem perferendis odio aperiam!</p>
+            <a href="{{ path('posts_show') }}" class="btn btn-primary">Lire la suite</a>
+        </div>
+    </post>
+    <post>
+        <h2>Titre de l'article</h2>
+        <div class="metadata">Ecrit le 09/09/2018 à 09:39 dans la catégorie Politique</div>
+        <div class="content">
+            <img src="http://placehold.it/350x150" alt="">
+            <p>Reiciendis adipisci quam eius, exercitationem vero, dolor quo veritatis explicabo a saepe temporibus ex. Numquam!</p>
+            <p>Qui, saepe nemo? Maxime tenetur exercitationem laborum placeat cumque odit molestiae provident porro architecto nulla.</p>
+            <a href="{{ path('posts_show') }}" class="btn btn-primary">Lire la suite</a>
+        </div>
+    </post>
+
+</section>
+
+{% endblock %}
