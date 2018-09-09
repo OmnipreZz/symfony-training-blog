@@ -17,9 +17,9 @@
             <p class="card-text author">Ecrit par {{ post.author }} le {{ post.createdAt | date('d/m/Y') }} à {{ post.createdAt
                 | date('H:i') }}</p>
             <div class="text-right">
-                <a href="/post/{{ post.id }}" class="btn btn-dark" role="button"><i class="fas fa-eye"></i></a>
-                <a href="/posts/update/{{ post.id }}" class="btn btn-dark" role="button"><i class="fas fa-edit"></i></a>
-                <a href="/posts/delete/{{ post.id }}" class="btn btn-dark" role="button"><i class="fas fa-trash-alt"></i></a>
+                <a href="{{ path('post_show', {'id': post.id}) }}" class="btn btn-dark" role="button"><i class="fas fa-eye"></i></a>
+                <a href="{{ path('post_edit', {'id': post.id}) }}" class="btn btn-dark" role="button"><i class="fas fa-edit"></i></a>
+                <a href="{{ path('post_delete', {'id': post.id}) }}" class="btn btn-dark" role="button"><i class="fas fa-trash-alt"></i></a>
             </div>
         </div>
     </div>

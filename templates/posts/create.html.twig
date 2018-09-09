@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formPost 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>add post</h1>
+
+    {{ form_start(formPost) }}
+    {{ form_widget(formPost) }}
+    <button type="submit" class="btn btn-primary">
+        {% if editMode %}
+            Edit
+        {% else %}
+            Create
+        {% endif %}
+    </button>
+    {{ form_end(formPost) }}
+
+    
+
+</div>
+
+{% endblock %} 
