@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Post;
 
 class PostsController extends AbstractController
 {
@@ -12,8 +13,10 @@ class PostsController extends AbstractController
      */
     public function index()
     {
+        $repo = $this->getDoctrine()->getRepository(Post::class);
+        $posts = $repo->findAll();
         return $this->render('posts/index.html.twig', [
-            'controller_name' => 'PostsController',
+            'posts' => $posts
         ]);
     }
 
@@ -28,12 +31,14 @@ class PostsController extends AbstractController
     }
 
     /**
-     * @Route("/posts/12", name="posts_show")
+     * @Route("/post/{id}", name="posts_show")
      */
-    public function show()
+    public function show($id)
     {
+        $repo = $this->getDoctrine()->getRepository(Post::class);
+        $post = $repo->find($id);
         return $this->render('posts/show.html.twig', [
-            'title' => 'coucou',
+            'post' => $post
         ]);
     }
 }
